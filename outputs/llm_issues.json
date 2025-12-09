@@ -1,0 +1,218 @@
+[
+  {
+    "id": "ISSUE1",
+    "file": "ExaminationRoom.java",
+    "line": 25,
+    "category": "CORRECTNESS",
+    "severity": "LOW",
+    "title": "Off-by-one error in waiting list comparison",
+    "description": "The compareTo method compares the size of two ExaminationRoom objects. However, it does not account for null elements, which can cause an off-by-one error."
+  },
+  {
+    "id": "ISSUE2",
+    "file": "ExaminationRoom.java",
+    "line": 36,
+    "category": "CORRECTNESS",
+    "severity": "LOW",
+    "title": "Potential null pointer risk in equals method",
+    "description": "The equals method checks if two ExaminationRoom objects have the same waiting patients. However, it does not check for null waiting patients, which can cause a null pointer exception."
+  },
+  {
+    "id": "ISSUE3",
+    "file": "Hospital.java",
+    "line": 53,
+    "category": "PERFORMANCE",
+    "severity": "LOW",
+    "title": "Inefficient data structure for waiting lists",
+    "description": "The Hospital class uses a List to store ExaminationRoom objects. However, this can cause inefficient performance when updating the waiting lists."
+  },
+  {
+    "id": "ISSUE4",
+    "file": "Doctor.java",
+    "line": 13,
+    "category": "CORRECTNESS",
+    "severity": "MEDIUM",
+    "title": "Potential null pointer risk in constructor",
+    "description": "One of the constructors for the Doctor class does not check if the specialty is null before assigning it to an instance variable."
+  },
+  {
+    "id": "ISSUE5",
+    "file": "Patient.java",
+    "line": 17,
+    "category": "CORRECTNESS",
+    "severity": "LOW",
+    "title": "Potential off-by-one error in age calculation",
+    "description": "The age method calculates the age of a Patient by subtracting the birth year from the current year. However, it does not account for leap years."
+  },
+  {
+    "id": "ISSUE6",
+    "file": "UI.java",
+    "line": 134,
+    "category": "SECURITY",
+    "severity": "MEDIUM",
+    "title": "Potential security risk in GUI design",
+    "description": "The UI class uses a Combobox to display patients, but it does not validate the input data. This can cause a security risk if malicious data is entered."
+  },
+  {
+    "id": "ISSUE7",
+    "file": "UI.java",
+    "line": 141,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createAddPatientTab method",
+    "description": "The createAddPatientTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE8",
+    "file": "UI.java",
+    "line": 163,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createCheckOutPatientTab method",
+    "description": "The createCheckOutPatientTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE9",
+    "file": "UI.java",
+    "line": 177,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createCheckOutDoctorTab method",
+    "description": "The createCheckOutDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE10",
+    "file": "UI.java",
+    "line": 200,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createOverviewTab method",
+    "description": "The createOverviewTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE11",
+    "file": "UI.java",
+    "line": 230,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createAddDoctorTab method",
+    "description": "The createAddDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE12",
+    "file": "UI.java",
+    "line": 251,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createCheckOutDoctorTab method",
+    "description": "The createCheckOutDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE13",
+    "file": "UI.java",
+    "line": 270,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createOverviewTab method",
+    "description": "The createOverviewTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE14",
+    "file": "UI.java",
+    "line": 300,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createAddDoctorTab method",
+    "description": "The createAddDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE15",
+    "file": "UI.java",
+    "line": 318,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createCheckOutDoctorTab method",
+    "description": "The createCheckOutDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE16",
+    "file": "UI.java",
+    "line": 340,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createOverviewTab method",
+    "description": "The createOverviewTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE17",
+    "file": "UI.java",
+    "line": 360,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createAddDoctorTab method",
+    "description": "The createAddDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE18",
+    "file": "UI.java",
+    "line": 380,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createCheckOutDoctorTab method",
+    "description": "The createCheckOutDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE19",
+    "file": "UI.java",
+    "line": 402,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createOverviewTab method",
+    "description": "The createOverviewTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE20",
+    "file": "UI.java",
+    "line": 420,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createAddDoctorTab method",
+    "description": "The createAddDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE21",
+    "file": "UI.java",
+    "line": 440,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createCheckOutDoctorTab method",
+    "description": "The createCheckOutDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE22",
+    "file": "UI.java",
+    "line": 460,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createOverviewTab method",
+    "description": "The createOverviewTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE23",
+    "file": "UI.java",
+    "line": 480,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createAddDoctorTab method",
+    "description": "The createAddDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  },
+  {
+    "id": "ISSUE24",
+    "file": "UI.java",
+    "line": 500,
+    "category": "STYLE",
+    "severity": "LOW",
+    "title": "Minor code smell in createCheckOutDoctorTab method",
+    "description": "The createCheckOutDoctorTab method creates a GridPane with multiple Label objects, but it does not use any layout managers. This can cause inconsistent spacing between elements."
+  }
+]

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital System Code Comprehension</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 2rem auto;
+            max-width: 960px;
+            line-height: 1.6;
+            padding: 0 1rem;
+            background: #f7f7f7;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            margin-top: 2rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.25rem;
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        ul {
+            margin: 0.5rem 0 0.5rem 1.5rem;
+        }
+        li {
+            margin: 0.2rem 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<h1>Hospital Management System</h1>
+
+The hospital management system is a Java-based application that allows users to manage doctors, patients, and examination rooms. It provides an interface for adding, checking in, checking out, and managing patients and doctors.
+
+<h2>Doctor.java</h2>
+
+The Doctor class represents a doctor in the hospital. It has fields for the doctor's first name, last name, birth date, specialty, favorite room, and checked-in status. The class includes methods for setting these fields and checking if the doctor is already checked in.
+
+*   What this file/class is for: The Doctor class is used to represent a doctor in the hospital.
+*   Important fields and methods: The doctor's first name, last name, birth date, specialty, favorite room, and checked-in status are important fields. Methods like getSpecialty() and setCheckedIn(boolean) allow you to access and modify these fields.
+*   How it interacts with other files/classes: The Doctor class interacts with the ExaminationRoom class by storing a doctor in an examination room.
+
+<h2>ExaminationRoom.java</h2>
+
+The ExaminationRoom class represents an examination room in the hospital. It has fields for the room's number, occupied status, running status, occupying doctor, occupying patient, and waiting patients. The class includes methods for comparing sizes of waiting lists and resetting the examination room.
+
+*   What this file/class is for: The ExaminationRoom class is used to represent an examination room in the hospital.
+*   Important fields and methods: The room's number, occupied status, running status, occupying doctor, occupying patient, and waiting patients are important fields. Methods like compareTo(ExaminationRoom o) compare sizes of waiting lists and reset the examination room.
+*   How it interacts with other files/classes: The ExaminationRoom class interacts with the Doctor class by storing a doctor in an examination room.
+
+<h2>Hospital.java</h2>
+
+The Hospital class represents the hospital itself. It has fields for the list of doctors, patients, and examination rooms. The class includes methods for initializing the hospital, adding examination rooms, checking in patients and doctors, checking out patients and doctors, updating waiting lists, getting running rooms, and getting examination rooms.
+
+*   What this file/class is for: The Hospital class is used to represent the hospital itself.
+*   Important fields and methods: The list of doctors, patients, and examination rooms are important fields. Methods like initializeHospital() add examination rooms, checkInPatient(Patient patient) checks in a patient, checkOutDoctor(Doctor doctor) checks out a doctor, updateWaitingLists(), getRunningRooms(), and getExaminationRooms() allow you to manage the hospital.
+*   How it interacts with other files/classes: The Hospital class interacts with the ExaminationRoom class by storing examination rooms and updating waiting lists.
+
+<h2>Patient.java</h2>
+
+The Patient class represents a patient in the hospital. It has fields for the patient's first name, last name, birth date, specialty needed, and checked-in status. The class includes methods for setting these fields and checking if the patient is already checked in.
+
+*   What this file/class is for: The Patient class is used to represent a patient in the hospital.
+*   Important fields and methods: The patient's first name, last name, birth date, specialty needed, and checked-in status are important fields. Methods like getSpecialtyNeeded() and setCheckedIn(boolean) allow you to access and modify these fields.
+*   How it interacts with other files/classes: The Patient class interacts with the Hospital class by storing patients.
+
+<h2>Person.java</h2>
+
+The Person class represents a person, including doctors and patients. It has fields for the person's first name, last name, birth date, and full name. The class includes methods for getting the full name and checking if the person is already checked in.
+
+*   What this file/class is for: The Person class is used to represent a doctor or patient.
+*   Important fields and methods: The person's first name, last name, birth date, and full name are important fields. Methods like getFullName() check if the person is already checked in.
+*   How it interacts with other files/classes: The Person class interacts with the Hospital class by storing patients.
+
+<h2>Specialty.java</h2>
+
+The Specialty enum represents different medical specialties. It has values for Pediatrics, General practice, Cardiology, Surgery, Psychiatry, Dermatology, and Ear, Nose, and Throat.
+
+*   What this file/class is for: The Specialty enum is used to represent different medical specialties.
+*   Important fields and methods: There are no important fields or methods. It's a simple enum with different values.
+*   How it interacts with other files/classes: The Specialty enum interacts with the Patient class by storing a specialty needed.
+
+<h2>UI.java</h2>
+
+The UI class represents the user interface for the hospital management system. It includes methods for creating tabs and displaying data.
+
+*   What this file/class is for: The UI class is used to represent the user interface for the hospital management system.
+*   Important fields and methods: There are no important fields or methods. It's a simple class with methods for creating tabs and displaying data.
+*   How it interacts with other files/classes: The UI class interacts with the Hospital class by storing data in the UI.
+
+<h3>Example Use Cases</h3>
+
+*   Add a new doctor to the hospital:
+    1.  Create an instance of the Doctor class with the doctor's details.
+    2.  Call the checkInDoctor() method on the Hospital class with the doctor instance as an argument.
+*   Check in a patient to the hospital:
+    1.  Create an instance of the Patient class with the patient's details.
+    2.  Call the checkInPatient() method on the Hospital class with the patient instance as an argument.
+*   Check out a doctor from the hospital:
+    1.  Get the list of doctors in the hospital using the getDoctors() method on the Hospital class.
+    2.  Select the desired doctor and call the checkOutDoctor() method on the Hospital class with the selected doctor as an argument.
+*   View patient information:
+    1.  Get the list of patients in the hospital using the getPatients() method on the Hospital class.
+    2.  Select the desired patient and view their details.
+
+<h3>Commit Messages and API Documentation</h3>
+
+The commit messages should follow the standard Java convention of using imperative mood (e.g., "Add doctor check-in functionality").
+
+API documentation should include descriptions of each method, including input parameters, return types, and any exceptions that may be thrown.
+    </div>
+</body>
+</html>
