@@ -35,10 +35,32 @@ Open terminal in VS Code and follow the commands -
 
 >python analyze_llama.py <br>
 
-Loads all .java files from the configured project directory
-Builds Llama 3.2 analysis prompt
-Sends it to Ollama
-Extracts JSON from the response
-Saves results to:
-llm_issues.json
-llm_issues_report.html
+Loads all .java files from the configured project directory <br>
+Builds Llama 3.2 analysis prompt <br>
+Sends it to Ollama <br>
+Extracts JSON from the response <br>
+
+Saves results to: <br>
+llm_issues.json <br>
+llm_issues_report.html <br>
+
+## Generating Code Comprehension HTML
+Follow the below command in the same terminal - 
+
+> python summarize_code_llama.py
+
+Generates a html file which can be viewed on a browser for the result.
+
+## Comparing LLM Results with SpotBugs
+Follow the command below in the same terminal - 
+
+> python evaluate_results.py
+
+Loads llm_issues.json <br>
+Loads spotbugs_issues.csv <br>
+Normalizes categories <br>
+
+Identifies: <br>
+Issues found by both tools <br>
+Issues found only by LLM <br>
+Issues found only by SpotBugs <br>
