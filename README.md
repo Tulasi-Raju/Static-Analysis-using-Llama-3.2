@@ -19,14 +19,26 @@ Store the java file in a folder named Hospital System and the python files in a 
 ## Create and activate a Python virtual environment
 Type these commands on the terminal in VS Code to create a virtual environment - <br>
 
-cd "LLM Analysis"
-python -m venv venv <br>
-venv\Scripts\activate <br>
-pip install requests pandas <br>
+>cd "LLM Analysis"
+>python -m venv venv <br>
+>venv\Scripts\activate <br>
+>pip install requests pandas <br>
 
 ## Install and test Ollama
 After installing Ollama from the above given url follow these commands in a local terminal - 
 
-ollama pull llama3.2 <br>
-ollama run llama3.2 <br>
+>ollama pull llama3.2 <br>
+>ollama run llama3.2 <br>
 
+## Running LLM-Based Static Analysis (Llama 3.2)
+Open terminal in VS Code and follow the commands - 
+
+>python analyze_llama.py <br>
+
+Loads all .java files from the configured project directory
+Builds Llama 3.2 analysis prompt
+Sends it to Ollama
+Extracts JSON from the response
+Saves results to:
+llm_issues.json
+llm_issues_report.html
